@@ -1,0 +1,19 @@
+{
+  "name": "jesse/agency_contact",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Config\\": "config/",
+      "Routes\\": "routes/",
+      "Resources\\": "resources/",
+      "Database\\": "database/"
+    }
+  },
+  "authors": [
+    {
+      "name": "JesseLD",
+      "email": "jesseluis118@gmail.com"
+    }
+  ],
+  "require": {}
+}
