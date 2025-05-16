@@ -2,16 +2,18 @@
 
 namespace Database;
 
+use function App\Helpers\getEnv;
+
 class Connection
 {
   private static $instance = null;
   private $connection;
 
-  private $database = 'my_database';
-  private $username = 'username';
-  private $password = 'password';
-  private $host = 'localhost';
-  private $port = '3306';
+  private $database = getEnv('DB_DATABASE', 'database');
+  private $username = getEnv('DB_USERNAME', 'root');
+  private $password = getEnv('DB_PASSWORD', '');
+  private $host = getEnv('DB_HOST', 'localhost');
+  private $port = getEnv('DB_PORT', '3306');
 
   private function __construct()
   {
